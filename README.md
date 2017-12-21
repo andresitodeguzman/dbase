@@ -26,6 +26,7 @@ $pie = new DBase("pie", "../db");
 Database functions
 
 - DBase
+
 new DBase(string $name [, string $path])
 Initializes the database with a name and database directory
 
@@ -34,6 +35,7 @@ $pie = new DBase("pie", "../db");
 ```
 
 - rm
+
 rm()
 Deletes the database.
 
@@ -44,6 +46,7 @@ echo $pie -> rm();
 ```
 
 - rw
+
 rw(array $data)
 Rewrites the database with the provided data.
 
@@ -53,6 +56,7 @@ $pie -> rw($users);
 ```
 
 - add
+
 add(array $data)
 Appends data to the database.
 
@@ -64,6 +68,7 @@ $pie -> add(array("first" => "Jim", "last" => "Wales"));
 # Selecting data
 
 - get
+
 get(string $col, string $key, string $val)
 Finds the first row in which the inputted key's value and in inputted value match, and returns the value of the inputted column name.
 
@@ -72,6 +77,7 @@ echo $pie -> get("first","last","Doe"); // John
 ```
 
 - select
+
 select(array $cols)
 Gets a set of columns or all columns for all rows. An empty array selects all columns.
 
@@ -81,6 +87,7 @@ print_r($pie -> select(array()));
 ```
 
 - where
+
 where(array $ret, string $key, string $val)
 Selects the inputted columns, but only from the rows in which the value of the key matches the inputted value.
 
@@ -90,6 +97,7 @@ print_r($pie -> where(array(), "last", "Doe"));
 ```
 
 - in
+
 in(array $cols, string $key, array $val)
 Selects columns from rows in which the value of the key is a value in the provided array. 
 
@@ -98,6 +106,7 @@ print_r($pie -> in(array("first"), "last", array("Wales", "Doe")));
 ```
 
 - like
+
 like(array $cols, string $key, string $regex)
 Returns columns from rows where the key's value matches the given regular expression.
 
@@ -116,6 +125,7 @@ print_r($bacon -> select());
 print_r($cheese -> select());
 ```
 - union
+
 union(array $cols, DBase $second)
 Merges columns from two databases without duplicates
 
@@ -123,7 +133,8 @@ Merges columns from two databases without duplicates
 print_r($pie -> union(array(), $bacon));
 ```
 
-- joi
+- join
+
 join(string $method, array $cols, DBase $second, array $match)
 Selects columns from rows in both databases based on a key/value pair matching columns in either database. $method can be one of:
 
@@ -142,6 +153,7 @@ print_r($pie -> join("full", array(), $cheese, array("first" => "name")));
 Miscellaneous (but useful) functions
 
 - exists
+
 exists(string $key, string $val)
 Returns true if there exists the provided key-value pair.
 
@@ -163,6 +175,7 @@ echo "Does not exist";
 ```
 
 - count
+
 count([string $col])
 Counts the number of non-null rows for a certain column. No input counts all columns.
 
@@ -171,6 +184,7 @@ echo $pie -> count("first"); // 4
 ```
 
 - first & last
+
 first(string $col)
 last(string $col)
 Selects the first/last value in a column.
