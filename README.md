@@ -22,6 +22,10 @@ require("../DBase.php");
 $pie = new DBase("pie", "../db");
 ```
 
+## DBase Manager
+A better way to manage your DBase database is now on its way. Head over to http://github.com/andresitodeguzman/dbase-manager to get a sneak peek to the new DBase Manager. 
+
+
 ## Complete List of Functions
 Database functions
 
@@ -197,4 +201,4 @@ echo $pie -> last("first");
 ```
 
 ## Why Do I Keep this Repository
-I don't know why the original author had deleted the original repository of Fllat (original name). He had warned people who opened an issue that he is no longer maintaining the repository but didn't informed anyone about the repository deletion. Since DBase/Fllat lives at the core of all of my PHP-based projects, I will continue to maintain this repository. In the future, I will now name the copyright onto my name if enough edits and improvements would be made in the future. Also, I'll try to add support for PHP 7. This is still meant for personal, internal use and I don't guarantee to give support for any issues. Use at your own risk. Documentation about its usage will be available in the near future. There are comments on the code itself for all the functions available.
+I don't know why the original author had deleted the original repository of Fllat (original name). He had warned people who opened an issue that he is no longer maintaining the repository but didn't informed anyone about the repository deletion. Since DBase/Fllat lives at the core of all of my PHP-based projects, I will continue to maintain this repository. In the future, I will now name the copyright onto my name if enough edits and improvements would be made in the future. Also, I'll try to add support for PHP 7. This is still meant for personal, internal use and I don't guarantee to give support for any issues. Use at your own risk.
