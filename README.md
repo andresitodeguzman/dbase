@@ -81,7 +81,8 @@ print_r($pie -> select(array()));
 ```
 
 - where
-where(array $ret, string $key, string $val) Selects the inputted columns, but only from the rows in which the value of the key matches the inputted value.
+where(array $ret, string $key, string $val)
+Selects the inputted columns, but only from the rows in which the value of the key matches the inputted value.
 
 ```
 print_r($pie -> where(array("first"), "last", "Doe"));
@@ -122,8 +123,9 @@ Merges columns from two databases without duplicates
 print_r($pie -> union(array(), $bacon));
 ```
 
-- join
-join(string $method, array $cols, DBase $second, array $match) Selects columns from rows in both databases based on a key/value pair matching columns in either database. $method can be one of:
+- joi
+join(string $method, array $cols, DBase $second, array $match)
+Selects columns from rows in both databases based on a key/value pair matching columns in either database. $method can be one of:
 
 "inner": only show rows matched between the two databases
 "left": show all rows from acting database, but only matching rows from included database
