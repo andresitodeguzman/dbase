@@ -6,8 +6,8 @@
  * 
  * PHP version 5
  *
- * @author    Andresito de Guzman <andresitomyemail@gmail.com>
- * @copyright 2017 Andresito de Guzman
+ * @author    Alfred Xing <xing@lfred.info>
+ * @copyright 2013 Alfred Xing
  * @license   LICENSE.md MIT License
  * @version   0.1.0
  * 

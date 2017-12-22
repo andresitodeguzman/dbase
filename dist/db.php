@@ -1,13 +1,12 @@
 <?php
 
 /**
- * Dbase: A flat file database system. Driven by PHP.
- * Stores data in JSON. SQL based data fetching.
+ * DBase: A PHP-driven database that stores in JSON. Less of Databases more * on creating awesomeness.
  *
- * PHP version 5.4
+ * PHP version 5.4. Compatible with PHP version 7
  *
- * @author    Alfred Xing <xing@lfred.info>
- * @copyright 2013 Alfred Xing
+ * @author    Andresito de Guzman <andresitomyemail@gmail.com>
+ * @copyright 2017 Andresito de Guzman
  * @license   LICENSE.md MIT License
  * @version   0.1
  *
@@ -15,7 +14,7 @@
 
 require "vendor/prequel.php";
 
-class Dbase
+class DBase
 {
 
 	/**
@@ -541,9 +540,5 @@ class Dbase
 	}
 
 }
-
-// Set Timezone
-$timezone = "Asia/Manila";
-date_default_timezone_set($timezone);
 
 ?>

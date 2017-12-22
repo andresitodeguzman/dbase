@@ -4,12 +4,12 @@
  * Prequel: SQL-based manipulations for PHP arrays.
  * Select. Where. Like. Union. Join.
  * 
- * PHP version
+ * PHP version 5
  *
-  * @author    Alfred Xing <xing@lfred.info>
+ * @author    Alfred Xing <xing@lfred.info>
  * @copyright 2013 Alfred Xing
  * @license   LICENSE.md MIT License
- * @version   0.1
+ * @version   0.1.0
  * 
  */
 
