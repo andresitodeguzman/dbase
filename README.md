@@ -1,5 +1,23 @@
 # DBase
-JSON flat-file database for small PHP projects.
+Database for rapid and stable web applications.
+A PHP-driven database that stores in JSON. Less of Databases more on creating awesomeness. 
+
+## Why DBase?
+- Running Parts
+
+Passive. Runs only when you need the data!
+
+- PHP at the Core!
+
+The scripting language that powers up 80% of all websites runs DBase so no need to worry about implementation. From your RESTFUL APIs to a basic blog site, DBase can handle everything with ease.
+
+- The Data is Yours. Download and Backup Rapidly
+
+Unlike complex RDBMS that is hard to manage. The data is stored in JSON that you can easily download and keep in a safer location for archive. You are in control with your data. Want to use a JSON management software to edit your stored data? No problem.
+
+- Easy to Install
+
+Just a basic require will do the trick. Include the file, create the DBase object and you are good to go! No need for tedious Database connections that just does not work!
 
 
 ## Getting Started
@@ -32,6 +50,7 @@ Database functions
 - DBase
 
 new DBase(string $name [, string $path])
+
 Initializes the database with a name and database directory
 
 ```php
@@ -41,6 +60,7 @@ $pie = new DBase("pie", "../db");
 - rm
 
 rm()
+
 Deletes the database.
 
 ```php
@@ -52,6 +72,7 @@ echo $pie -> rm();
 - rw
 
 rw(array $data)
+
 Rewrites the database with the provided data.
 
 ```php
@@ -62,6 +83,7 @@ $pie -> rw($users);
 - add
 
 add(array $data)
+
 Appends data to the database.
 
 ```php
@@ -74,6 +96,7 @@ $pie -> add(array("first" => "Jim", "last" => "Wales"));
 - get
 
 get(string $col, string $key, string $val)
+
 Finds the first row in which the inputted key's value and in inputted value match, and returns the value of the inputted column name.
 
 ```php
@@ -83,6 +106,7 @@ echo $pie -> get("first","last","Doe"); // John
 - select
 
 select(array $cols)
+
 Gets a set of columns or all columns for all rows. An empty array selects all columns.
 
 ```php
@@ -93,6 +117,7 @@ print_r($pie -> select(array()));
 - where
 
 where(array $ret, string $key, string $val)
+
 Selects the inputted columns, but only from the rows in which the value of the key matches the inputted value.
 
 ```
@@ -103,6 +128,7 @@ print_r($pie -> where(array(), "last", "Doe"));
 - in
 
 in(array $cols, string $key, array $val)
+
 Selects columns from rows in which the value of the key is a value in the provided array. 
 
 ```php
@@ -112,6 +138,7 @@ print_r($pie -> in(array("first"), "last", array("Wales", "Doe")));
 - like
 
 like(array $cols, string $key, string $regex)
+
 Returns columns from rows where the key's value matches the given regular expression.
 
 ```php
@@ -131,6 +158,7 @@ print_r($cheese -> select());
 - union
 
 union(array $cols, DBase $second)
+
 Merges columns from two databases without duplicates
 
 ```php
@@ -140,6 +168,7 @@ print_r($pie -> union(array(), $bacon));
 - join
 
 join(string $method, array $cols, DBase $second, array $match)
+
 Selects columns from rows in both databases based on a key/value pair matching columns in either database. $method can be one of:
 
 "inner": only show rows matched between the two databases
@@ -159,6 +188,7 @@ Miscellaneous (but useful) functions
 - exists
 
 exists(string $key, string $val)
+
 Returns true if there exists the provided key-value pair.
 
 ```php
@@ -181,6 +211,7 @@ echo "Does not exist";
 - count
 
 count([string $col])
+
 Counts the number of non-null rows for a certain column. No input counts all columns.
 
 ```php
@@ -191,6 +222,7 @@ echo $pie -> count("first"); // 4
 
 first(string $col)
 last(string $col)
+
 Selects the first/last value in a column.
 
 ```php
